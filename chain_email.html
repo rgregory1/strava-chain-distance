@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<base target="_top">
+	<style>
+		a.button {
+			border: none;
+			color: white;
+			padding: 1em 1.5em;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			background-color: #4CAF50;
+			border-radius: 5px;
+		}
+
+		a.button:hover {
+			background-color: #555;
+		}
+
+		a.button:active {
+			background-color: black;
+		}
+
+		a.button:visited {
+			background-color: #ccc;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Nice Ride!</h2>
+	<p>
+		You Have ridden <?= totalMiles ?> miles since your last chain waxing.
+	</p>
+
+<? currentChains.forEach(function(chain) {  ?>
+	  <p>
+    <a class="button"
+		  href="https://script.google.com/macros/s/AKfycbxbd7a2zXUeL1wkcYn573rq_wZ6_GYgJuv9ULFNg-XPEXnqNqscmrHg-G9AVFDqsU5rNw/exec?ssid=1TiPkNlx5E4a4NVJeGTltIfrjyvUoZ2Co6QMb1GAYiPs&name=RecentActivities&chainName=<?= chain[0] ?>&totalMiles=<?= totalMiles ?>">Change Chain - <?= chain[0] ?></a>
+<? }) ?>
+	  </p>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
